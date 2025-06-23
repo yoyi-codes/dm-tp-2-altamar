@@ -45,7 +45,7 @@
                         </ul>
                         <p> <img src="imagenes/servicios-delfin.jpg" alt="Delfin" class="borde-imagen" width="320" height="214"></p>
                     </div>
-                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                    <label for="modal-contact" class="servicios-button openModal">RESERVAR</label>
                 </div>
 
                 <div class="servicios-col-centro">
@@ -61,7 +61,7 @@
                             <li>- Ambientación especial</li>
                         </ul>
                     </div>
-                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                    <label for="modal-contact" class="servicios-button openModal">RESERVAR</label>
                 </div>
 
                 <div class="servicios-col-der">
@@ -77,15 +77,23 @@
                         </ul>
                         <p> <img src="imagenes/servicios-fiesta2.png" alt="Fiesta" class="borde-imagen" width="250" height="250"> </p>
                     </div>
-                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                    <label for="modal-contact" class="servicios-button openModal">RESERVAR</label>
                 </div>
 
-                <!--Contenedor de ventaba modal-->
-                <input type="checkbox" id="modal-switch" class="modal-switch">
+                <!-- estados ventanas modales-->
+
+                <!-- Estado inicial (ningún modal abierto) -->
+                <input type="radio" name="modal-switch" id="modal-off" checked>
+                <!-- Modal de contacto -->
+                <input type="radio" name="modal-switch" id="modal-contact">
+                <!-- Modal de éxito -->
+                <input type="radio" name="modal-switch" id="modal-success">
+
+                <!--Contenedor modal contacto-->
                 <div class="modal">
                     <!--Contenido de la ventana modal-->
                     <div class="modal-content">
-                        <label for="modal-switch" class="modal-close">&times;</label>
+                        <label for="modal-off" class="modal-close">&times;</label>
 
                         <h4>Formulario de comentarios</h4>
 
@@ -102,22 +110,19 @@
                             <label for="message">Mensaje:</label>
                             <textarea id="message" name="message" rows="4" required></textarea>
 
-                            <label for="modal-switch" class="modal-submit">
-                                <label for="modal-success-switch" class="modal-submit-interno">Enviar</label>
-                            </label>
+                            <label for="modal-success" class="modal-submit">Enviar</label>
                         </form>
                     </div>
                 </div>
 
                 <!--Contenedor modal para mensajes de éxito-->
-                <input type="checkbox" id="modal-success-switch" class="modal-success-switch">
                 <div class="modal-success">
                     <div class="modal-success-content">
-                        <label for="modal-success-switch" class="modal-close">&times;</label>
+                        <label for="modal-off" class="modal-close">&times;</label>
 
                         <h4>¡Gracias!</h4>
-                        <p>Gracias por su solicitud, nos pondremos en contacto con Usted en breve.</p>
-                        <label for="modal-success-switch" class="modal-success-close">Cerrar</label>
+                        <p>Gracias por su solicitud, nos pondremos en contacto con usted en breve.</p>
+                        <label for="modal-off" class="modal-success-close">Cerrar</label>
                     </div>
                 </div>
 
