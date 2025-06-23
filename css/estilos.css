@@ -1,0 +1,506 @@
+/* TODO: esto carga fuentes ¿se van a usar? */
+@font-face {
+  font-family: 'MOON GET!';
+  src: url('../fuentes/moon_get-Heavy.woff2') format('woff2'),
+    url('../fuentes/moon_get-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #10256E, #BBABDD );
+  background-color: #BBABDD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#contenedor {
+  width: 1300px;
+  margin: 10px auto;
+}
+
+/* HEADER */
+header {
+  width: auto;
+  margin: auto;
+  height: 100px;
+  background-image: linear-gradient(to bottom, #10256E, #BBABDD );
+  display: flex;
+  justify-content: space-between;     
+  align-items: center;
+}
+
+#logo {
+  width: 258px;
+  height: 66px;
+  color: #00FF3C;
+  background-image: url(../imagenes/imagotipo.png);
+  text-indent: -250px;
+  overflow: hidden;
+  filter: invert(100%);
+  margin-left: 55px;
+}
+
+/* NAV principal */
+nav {
+  overflow: hidden;
+  margin-bottom: -55px;;
+}
+
+/* LISTA horizontal */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 5px;
+}
+
+/* Cada elemento */
+nav ul li {
+  flex: 0 0 auto;
+}
+
+/* BOTONES de navegación */
+nav ul li a {
+  display: block;
+  width: 150px;
+  background-color: #2F9AB2;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* HOVER botones navegacion */
+nav ul li a:hover {
+  background-color: #505898;
+}
+
+
+/* Para reutilizar en varias paginas */
+section {
+  width: auto;
+  height: auto;
+  background-color: #BBABDD;
+}
+
+section h2 {
+  font-size: 45px;
+  font-family:'MOON GET!','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 700px;
+  object-fit: cover;
+}
+
+.borde-imagen {
+  border: 3px solid #10256E;
+  border-radius: 10px;
+}
+
+
+/* HOME */
+.home-content {
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  display: block;
+}
+
+.home-content div {
+  background-color: rgba(182, 181, 181, 0.6);
+  width: auto;
+  height: auto;
+  padding:20px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-content div h2 {
+  font-family:'MOON GET!',Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  color: darkslateblue;
+  letter-spacing: 2px;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 3px 3px 5px white;
+}
+
+.home-content div p {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.home-img-izq {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.home-img-der {
+  float: right;
+  margin: -30px 0 20px 10px;
+}
+
+
+/* SERVICIOS */
+.servicios-content {
+  width: auto;
+  height: 600px;
+  background: aliceblue;
+  margin: auto;;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items:stretch;
+  padding: 5px;
+}
+
+.servicios-col-izq, .servicios-col-centro, .servicios-col-der {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px;
+}
+
+.servicios-col-izq .servicios-contenido, .servicios-col-centro .servicios-contenido, .servicios-col-der .servicios-contenido {
+  flex-grow: 1; /* evita problema con botones que se montan en el footer (col derecha borde imagen)  */
+}
+
+.servicios-col-izq, .servicios-col-centro, .servicios-col-der {
+  width: 33%;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.servicios-col-izq, .servicios-col-der {
+  background: #C3CFF5;
+}
+
+.servicios-col-izq h2, .servicios-col-der h2 {
+  margin-top: 13px;
+}
+
+.servicios-col-centro {
+  background: #B8B5DD;
+}
+
+.servicios-col-centro img {
+  margin-top: 13px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.servicios-col-izq h2, .servicios-col-centro h2, .servicios-col-der h2 {
+  font-size: 30px;
+  color: darkslateblue;
+  font-family: 'MOON GET!',Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-shadow: 3px 3px 3px white;
+}
+
+.servicios-col-izq h3, .servicios-col-centro h3, .servicios-col-der h3 {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.servicios-col-izq p, .servicios-col-centro p, .servicios-col-der p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.servicios-col-izq ul li, .servicios-col-centro ul li, .servicios-col-der ul li {
+  list-style-type: none;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.servicios-col-izq .servicios-button, .servicios-col-centro .servicios-button, .servicios-col-der .servicios-button {
+  margin-top: 0;
+  align-self: center;
+}
+
+.servicios-button {
+  display: inline-block;
+  padding: 15px 100px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2F9AB2;
+  border: none;
+  border-radius: 15px;
+}
+
+.servicios-button:hover {
+  background-color: #505898
+}
+
+.servicios-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+/* VENTANAS MODAL */
+
+/* estado ventanas modal */
+.modal-switch, .modal-success-switch {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+/*contenido de la ventana modal*/
+.modal-content {
+  background-color: rgb(214, 237, 244);
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* Titulo de la ventana modal */
+.modal-content h4 {
+  text-align: center;
+}
+
+/*button X de cerrar*/
+.modal-content .modal-close, .modal-success-content .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*estilos de formulario*/
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #444;
+  text-align: left;
+}
+
+.modal-content input, .modal-content textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* boton modales */
+.modal-content label.modal-submit, .modal-success-content label.modal-success-close {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+/* hay un estilo para todos los labels que pinta el texto en negro, pero este lo sobreescribe para el label interno del boton que hace la aparicion del modal de exito */
+.modal-content label.modal-submit-interno {
+  color: white;
+}
+
+.modal-content label.modal-submit:hover, .modal-success-content label.modal-success-close:hover {
+  background-color: #3e8e41;
+}
+
+/* Mostrar el modal cuando el input está activado */
+.modal-switch:checked ~ .modal,
+.modal-success-switch:checked ~ .modal-success {
+  display: flex;
+}
+
+/*Contenedor nueve de la ventana modal para mensajes de exito*/
+.modal-success {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/*Contenido de la nueva ventana modal*/
+.modal-success-content {
+  background-color: #f0fff0;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2e7d32;
+}
+
+
+/* CONTACTO */
+.contacto-content {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f5f5f5;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.contacto-content .columna {
+  flex: 1;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.contacto-content .columna.izquierda {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contacto-content .columna.izquierda h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: darkslateblue;
+}
+
+.contacto-content .columna.izquierda p {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contacto-content .columna.derecha {
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #10256E;
+  color: white;
+  padding: 24px 32px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+/* Alineaciones específicas */
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Logo */
+.footer-logo {
+  width: 200px;
+  filter: invert(100%);
+}
+
+/* Copyright */
+.footer-center p {
+  font-size: 14.4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Redes sociales */
+.footer-right a {
+  color: #fff;
+  font-size: 28.8px;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #1da1f2; /* Azul para hover */
+}
+

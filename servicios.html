@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AltaMar-Turismo y Eventos.</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <h1 id="logo">AltaMar</h1>
+            <nav>
+                <ul>
+                    <li> <a href="/altamar.html"> HOME </a></li>
+                    <li> <a href="#"> NOSOTROS </a></li>
+                    <li> <a href="#"> SERVICIOS </a></li>
+                    <li> <a href="#"> RESEÑAS </a></li>
+                    <li> <a href="#"> GALERÍA </a></li>
+                    <li> <a href="/contacto.html"> CONTACTO </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="banner">
+            <img src="imagenes/banner-servicios.png" alt="Banner AltaMar">
+        </div>
+
+        <section>
+            <div class="servicios-content">
+
+                <div class="servicios-col-izq">
+                    <div class="servicios-contenido">
+                        <h2>Avistamiento de Delfines</h2>
+                        <h3>Conecta con la naturaleza en libertad</h3>
+                        <p>Explora el mar y observa delfines en su hábitat natural, sin cautiverio. Ideal para los que
+                            buscan tranquilidad y belleza en alta mar.</p>
+                        <ul>
+                            <li>- Guiado por expertos</li>
+                            <li>- Bebidas incluidas</li>
+                            <li>- Posibilidad de baño</li>
+                        </ul>
+                        <p> <img src="imagenes/servicios-delfin.jpg" alt="Delfin" class="borde-imagen" width="320" height="214"></p>
+                    </div>
+                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                </div>
+
+                <div class="servicios-col-centro">
+                    <div class="servicios-contenido">
+                        <img src="imagenes/servicios-fiesta1.png" alt="Fiesta en el barco" class="borde-imagen" width="320" height="213">
+                        <h2>Fiestas en Barco</h2>
+                        <h3>El mar como pista de baile</h3>
+                        <p>Fiestas vibrantes con DJ, bar y luces en un barco moderno. Perfecto para grupos y celebraciones.
+                        </p>
+                        <ul>
+                            <li>- Individual o grupal</li>
+                            <li>- Eventos privados</li>
+                            <li>- Ambientación especial</li>
+                        </ul>
+                    </div>
+                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                </div>
+
+                <div class="servicios-col-der">
+                    <div class="servicios-contenido">
+                        <h2>Experiencia Combinada</h2>
+                        <h3>Dos en uno: naturaleza y diversión</h3>
+                        <p>Empieza con un paseo relajado y termina con una fiesta al atardecer. Personaliza tu experiencia.
+                        </p>
+                        <ul>
+                            <li>- Ruta y horario a medida</li>
+                            <li>- Ideal para eventos especiales</li>
+                            <li>- Atención premium y segura</li>
+                        </ul>
+                        <p> <img src="imagenes/servicios-fiesta2.png" alt="Fiesta" class="borde-imagen" width="250" height="250"> </p>
+                    </div>
+                    <label for="modal-switch" class="servicios-button openModal">RESERVAR</label>
+                </div>
+
+                <!--Contenedor de ventaba modal-->
+                <input type="checkbox" id="modal-switch" class="modal-switch">
+                <div class="modal">
+                    <!--Contenido de la ventana modal-->
+                    <div class="modal-content">
+                        <label for="modal-switch" class="modal-close">&times;</label>
+
+                        <h4>Formulario de comentarios</h4>
+
+                        <form id="feedbackForm" action="#" method="post">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+
+                            <label for="email">Correo electronico:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <label for="modal-switch" class="modal-submit">
+                                <label for="modal-success-switch" class="modal-submit-interno">Enviar</label>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Contenedor modal para mensajes de éxito-->
+                <input type="checkbox" id="modal-success-switch" class="modal-success-switch">
+                <div class="modal-success">
+                    <div class="modal-success-content">
+                        <label for="modal-success-switch" class="modal-close">&times;</label>
+
+                        <h4>¡Gracias!</h4>
+                        <p>Gracias por su solicitud, nos pondremos en contacto con Usted en breve.</p>
+                        <label for="modal-success-switch" class="modal-success-close">Cerrar</label>
+                    </div>
+                </div>
+
+
+            </div>
+    
+        </section>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="imagenes/imagotipo.png" alt="Logo AltaMar" class="footer-logo">
+                </div>
+            
+                <div class="footer-center">
+                    <p><i class="fas fa-copyright"></i> 2025 AltaMar. Todos los derechos reservados.</p>
+                </div>
+            
+                <div class="footer-right">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
